@@ -16,8 +16,14 @@ body {
         transition: background 0.3s ease, color 0.3s ease;
     }
 
-
-header {
+.container1 {
+    margin-top:2%;
+}
+ .header {
+    
+   
+   
+   
     border-radius:10px;
 }
 
