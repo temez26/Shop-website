@@ -4,14 +4,45 @@
 }
 
 body {
-    background-color: #303030;
+    min-height: 1000px; /* Adjust the min-height as needed */
+
+    background: rgb(73,73,73);
+    background: radial-gradient(circle, rgba(73,73,73,1) 0%, rgba(73,112,34,1) 87%);
+}
+    body.light-mode {
+        background: rgb(126,126,126);
+        background: radial-gradient(circle, rgba(126,126,126,1) 0%, rgba(32,32,32,1) 87%);
+        color: #dcdcdc;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+
+header {
+    border-radius:10px;
 }
 
+.dark-mode-toggle:hover {
+    color: #dc3545;
+}
+
+body.dark-mode {
+    background: rgb(36,36,36);
+    background: radial-gradient(circle, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 87%);
+    color: #dcdcdc;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.adjust-margin {
+    margin-left:2%;
+    margin-top:1%;
+}
 .card-overlay, .card-img {
     width: 100%;
     height: 100%;
 }
-
+.cards-wrapper {
+    margin-top:2%;
+}
 .header {
     width: 100%;
     height: 100vh;
@@ -52,17 +83,33 @@ body {
     }
 
 .about-us-right {
+    
     box-sizing: border-box;
     width: 60%;
-    padding: 0 100px;
+    padding: 0 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    flex-wrap: wrap;
+    
+   
 }
 
 @media screen and (max-width: 1000px) {
     .about-us-right {
         padding: 0 25px;
+    }
+}
+@media screen and (max-width: 317px) {
+    .about-us-right {
+        margin-bottom:70%;
+    }
+}
+
+@media screen and (max-width: 287px) {
+    .about-us-right {
+        margin-bottom: 90%;
     }
 }
 
@@ -154,7 +201,7 @@ body {
 
 .main-heading {
     font-family: "Marck Script", cursive;
-    font-size: 100px;
+    font-size: 60px;
     font-weight: 300;
     color: #d8ae53;
     margin-bottom: 40px;
@@ -163,7 +210,7 @@ body {
 
 @media screen and (max-width: 1000px) {
     .main-heading {
-        font-size: 60px;
+        font-size: 45px;
         margin-bottom: 20px;
     }
 }
@@ -178,7 +225,7 @@ body {
 
 .sub-heading {
     font-family: Roboto, sans-serif;
-    font-size: 60px;
+    font-size: 45px;
     font-weight: 300;
     color: #ccc;
     margin-bottom: 80px;
@@ -228,9 +275,10 @@ body {
 }
 
 .card {
-    width: 33.3333%;
+    width: 100%;
     height: 30vw;
     position: relative;
+    margin:4%;
     overflow: hidden;
 }
 
@@ -246,6 +294,7 @@ body {
 
 .card-img {
     object-fit: cover;
+   
 }
 
 .card-overlay {
@@ -344,57 +393,6 @@ body {
 }
 
 
-@media screen and (max-width: 1000px) {
-    .footer-social-media {
-        position: relative;
-        left: 40%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .footer-social-media {
-        position: relative;
-        left: 38%;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .footer-social-media {
-        position: relative;
-        left: 34%;
-    }
-}
-@media screen and (max-width: 500px) {
- 
-}
-
-@media screen and (max-width: 423px) {
-    .footer-social-media {
-        position: relative;
-        left: 30%;
-    }
-}
-
-@media screen and (max-width: 370px) {
-    .footer-social-media {
-        position: relative;
-        left: 28%;
-    }
-}
-
-@media screen and (max-width: 356px) {
-    .footer-social-media {
-        position: relative;
-        left: 25%;
-    }
-}
-
-@media screen and (max-width: 337px) {
-    .footer-social-media {
-        position: relative;
-        left: 22%;
-    }
-}
 
 
 
@@ -409,23 +407,5 @@ body {
     border-radius: 25%;
 }
 
-.fa-youtube {
-    background: #bb0000;
-    color: white;
-}
 
-.fa-instagram {
-    background: #125688;
-    color: white;
-}
-
-.fa-facebook-square {
-    background: #3B5998;
-    color: white;
-}
-
-.fa-google-plus-square {
-    background: #dd4b39;
-    color: white;
-}
 /*# sourceMappingURL=styles.css.map */

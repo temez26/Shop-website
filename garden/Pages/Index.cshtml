@@ -19,9 +19,10 @@
         <link rel="stylesheet" href="css/styles.css">
         <title>Document</title>
     </head>
-
+ 
     <body>
         <!--Header-->
+        <div class="container">
         <header class="header">
             <div class="brand">
                 <a href="#" class="logo"><i class="fas fa-seedling"></i></a>
@@ -36,11 +37,13 @@
                 <button type="button" class="main-btn">Click here to join</button>
             </div>
         </header>
+    </div>
         <!--Header end-->
         <!-- About section -->
+        <div class="container">
         <section class="about-us">
             <div class="about-us-left">
-                <img src="/images/about-image.png" alt="about-image" />
+                <img src="/images/about-image.png" alt="about-image"  />
             </div>
             <div class="about-us-right">
                 <h1 class="main-heading">About Us</h1>
@@ -64,64 +67,80 @@
                 </div>
                 <button type="button" class="main-btn">Read more</button>
             </div>
+
         </section>
+    </div>
         <!-- End of About section -->
         <!-- Gallery section -->
+    <div class="container">
         <section class="gallery">
-            <div class="cards-wrapper">
-                <div class="card">
-                    <div class="card-overlay">
-                        <h1 class="card-overlay-heading">Flowers</h1>
-                        <p class="card-overlay-paragraph">Starting from: 5,00 €</p>
-                        <button type="button" class="card-overlay-btn">Order Now</button>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-overlay">
+                            <h1 class="card-overlay-heading">Flowers</h1>
+                            <p class="card-overlay-paragraph">Starting from: 5,00 €</p>
+                            <button type="button" class="btn btn-primary card-overlay-btn">Order Now</button>
+                        </div>
+                        <img src="images/gallery-img-1.jpg" class="card-img" />
                     </div>
-                    <img src="images/gallery-img-1.jpg" class="card-img" />
                 </div>
-                <div class="card">
-                    <div class="card-overlay">
-                        <h1 class="card-overlay-heading">Vegetables</h1>
-                        <p class="card-overlay-paragraph">Starting from: 2,50 €</p>
-                        <button type="button" class="card-overlay-btn">Order Now</button>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-overlay">
+                            <h1 class="card-overlay-heading">Vegetables</h1>
+                            <p class="card-overlay-paragraph">Starting from: 2,50 €</p>
+                            <button type="button" class="btn btn-primary card-overlay-btn">Order Now</button>
+                        </div>
+                        <img src="images/gallery-img-2.jpg" class="card-img" />
                     </div>
-                    <img src="images/gallery-img-2.jpg" class="card-img" />
                 </div>
-                <div class="card">
-                    <div class="card-overlay">
-                        <h1 class="card-overlay-heading">Garden Tools</h1>
-                        <p class="card-overlay-paragraph">Starting from: 15,00 €</p>
-                        <button type="button" class="card-overlay-btn">Order Now</button>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-overlay">
+                            <h1 class="card-overlay-heading">Garden Tools</h1>
+                            <p class="card-overlay-paragraph">Starting from: 15,00 €</p>
+                            <button type="button" class="btn btn-primary card-overlay-btn">Order Now</button>
+                        </div>
+                        <img src="images/gallery-img-3.jpg" class="card-img" />
                     </div>
-                    <img src="images/gallery-img-3.jpg" class="card-img" />
                 </div>
-                <div class="card">
-                    <div class="card-overlay">
-                        <h1 class="card-overlay-heading">Lawn Movers</h1>
-                        <p class="card-overlay-paragraph">Starting from: 150,00 €</p>
-                        <button type="button" class="card-overlay-btn">Order Now</button>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-overlay">
+                            <h1 class="card-overlay-heading">Lawn Movers</h1>
+                            <p class="card-overlay-paragraph">Starting from: 150,00 €</p>
+                            <button type="button" class="btn btn-primary card-overlay-btn">Order Now</button>
+                        </div>
+                        <img src="images/gallery-img-4.jpg" class="card-img" />
                     </div>
-                    <img src="images/gallery-img-4.jpg" class="card-img" />
                 </div>
-                <div class="card">
-                    <div class="card-overlay">
-                        <h1 class="card-overlay-heading">Garden Accessories</h1>
-                        <p class="card-overlay-paragraph">Starting from: 5,00 €</p>
-                        <button type="button" class="card-overlay-btn">Order Now</button>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-overlay">
+                            <h1 class="card-overlay-heading">Garden Accessories</h1>
+                            <p class="card-overlay-paragraph">Starting from: 5,00 €</p>
+                            <button type="button" class="btn btn-primary card-overlay-btn">Order Now</button>
+                        </div>
+                        <img src="images/gallery-img-5.jpg" class="card-img" />
                     </div>
-                    <img src="images/gallery-img-5.jpg" class="card-img" />
                 </div>
-                <div class="card">
-                    <div class="card-overlay">
-                        <h1 class="card-overlay-heading">Pest Control</h1>
-                        <p class="card-overlay-paragraph">Price: 75,00 € / hr</p>
-                        <button type="button" class="card-overlay-btn">Ask offer</button>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-overlay">
+                            <h1 class="card-overlay-heading">Pest Control</h1>
+                            <p class="card-overlay-paragraph">Price: 75,00 € / hr</p>
+                            <button type="button" class="btn btn-primary card-overlay-btn">Ask offer</button>
+                        </div>
+                        <img src="images/gallery-img-6.jpg" class="card-img" />
                     </div>
-                    <img src="images/gallery-img-6.jpg" class="card-img" />
                 </div>
             </div>
         </section>
-        <!-- End of Gallery section -->
-        <!-- Footer -->
-        <!-- End of Footer section-->
+    </div>
+
+
+   
     </body>
 
 </html>

@@ -1,5 +1,11 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+html[b-nk023v7m6a] {
+    font-size: 14px;
+    color: white;
+    height: 100%;
+}
+
 
 a.navbar-brand[b-nk023v7m6a] {
   white-space: normal;
@@ -50,11 +56,10 @@ p[b-nk023v7m6a] {
     font-size:18px;
     text-align:center;
     font-style: italic;
+    color: white;
 }
 
-@media (max-width:1199px) {
-   
-}
+
 
 @media (max-width:484px) {
     .footer[b-nk023v7m6a] {
