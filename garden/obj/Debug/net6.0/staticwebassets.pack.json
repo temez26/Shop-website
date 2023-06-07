@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\temek\\source\\repos\\garden\\garden\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\garden.bundle.scp.css",
-      "PackagePath": "staticwebassets\\garden.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\temek\\source\\repos\\garden\\garden\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

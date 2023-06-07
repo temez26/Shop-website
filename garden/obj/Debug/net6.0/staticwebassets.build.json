@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DGkWJjXDr1slYQTl8Z7a3Mm2G79ZGuloec9w4Ke1u3w=",
+  "Hash": "q0fQgWyEx1MHaPIikgU1fRWMKN5+qIQqU/jVM1ZgulA=",
   "Source": "garden",
   "BasePath": "_content/garden",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\temek\\source\\repos\\garden\\garden\\obj\\Debug\\net6.0\\scopedcss\\bundle\\garden.styles.css",
-      "SourceId": "garden",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\temek\\source\\repos\\garden\\garden\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/garden",
-      "RelativePath": "garden.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\temek\\source\\repos\\garden\\garden\\obj\\Debug\\net6.0\\scopedcss\\bundle\\garden.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\temek\\source\\repos\\garden\\garden\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\garden.bundle.scp.css",
-      "SourceId": "garden",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\temek\\source\\repos\\garden\\garden\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/garden",
-      "RelativePath": "garden.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\temek\\source\\repos\\garden\\garden\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\garden.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\temek\\source\\repos\\garden\\garden\\wwwroot\\css\\site.css",
       "SourceId": "garden",

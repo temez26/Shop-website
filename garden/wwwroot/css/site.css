@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
 }
@@ -6,8 +6,8 @@
 body {
     min-height: 1000px; /* Adjust the min-height as needed */
 
-    background: rgb(73,73,73);
-    background: radial-gradient(circle, rgba(73,73,73,1) 0%, rgba(73,112,34,1) 87%);
+    background: rgb(97,70,70);
+    background: linear-gradient(90deg, rgba(97,70,70,1) 0%, rgba(63,71,29,1) 53%, rgba(50,77,30,1) 87%);
 }
     body.light-mode {
         background: rgb(126,126,126);
@@ -21,6 +21,98 @@ header {
     border-radius:10px;
 }
 
+﻿ 
+html {
+    font-size: 14px;
+    color: white;
+    height: 100%;
+}
+
+
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #0077cc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    color: white;
+}
+
+
+
+@media (max-width:484px) {
+    .footer {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+
+    h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:436px) {
+    .footer {
+        font-size: 10px;
+    }
+
+    .footer-font {
+        font-size: 10px;
+    }
+    p {
+        font-size:8px;
+    }
+}
 .dark-mode-toggle:hover {
     color: #dc3545;
 }
@@ -274,13 +366,27 @@ body.dark-mode {
     }
 }
 
-.card {
-    width: 100%;
-    height: 30vw;
-    position: relative;
-    margin:4%;
-    overflow: hidden;
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+.navbar-collapse.collapse.show {
+    justify-content: center;
+}
+
+    .navbar-collapse.collapse.show .navbar-toggler {
+        margin-right: auto;
+    }
 
 @media screen and (max-width: 768px) {
     .card {
@@ -292,104 +398,25 @@ body.dark-mode {
     left: 0;
 }
 
-.card-img {
-    object-fit: cover;
-   
-}
-
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    background-color: rgba(216, 174, 83, 0.5);
-    color: #fff;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: left 0.5s;
-}
-
-.card-overlay-heading {
-    font-family: Raleway, sans-serif;
-    font-size: 50px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
-
-@media screen and (max-width: 768px) {
-    .card-overlay-heading {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .card-overlay-heading {
-        font-size: 14px;
-    }
-}
-
-.card-overlay-paragraph {
-    font-family: Raleway, sans-serif;
-    font-size: 30px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-    margin: 30px;
-}
-
-@media screen and (max-width: 768px) {
-    .card-overlay-paragraph {
-        font-size: 12px;
-        margin: 15px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .card-overlay-paragraph {
-        font-size: 10px;
-    }
-}
-
-.card-overlay-btn {
-    width: 150px;
-    height: 40px;
-    color: #d8ae53;
-    background-color: #fff;
-    font-family: Raleway, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid #d8ae53;
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .card-overlay-btn {
-        width: 100px;
-        height: 33px;
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .card-overlay-btn {
-        width: 90px;
-        height: 30px;
-        font-size: 10px;
-    }
-   
-}
-.logo {
+.text-background {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
     position:relative;
-    margin-left:2%;
-    margin-top:1%;
-    float:left;
+    left:25%;
+    width:50%;
+    
+}
+
+
+
+
+
+.logo {
+    position: relative;
+    margin-left: 2%;
+    margin-top: 1%;
+    float: left;
 }
 
 
@@ -407,5 +434,3 @@ body.dark-mode {
     border-radius: 25%;
 }
 
-
-/*# sourceMappingURL=styles.css.map */

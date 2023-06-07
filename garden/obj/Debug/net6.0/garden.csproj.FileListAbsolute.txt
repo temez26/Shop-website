@@ -21,9 +21,7 @@ C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\staticwebassets\msbui
 C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\scopedcss\bundle\garden.styles.css
-C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\scopedcss\projectbundle\garden.bundle.scp.css
 C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\garden.dll
 C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\refint\garden.dll
 C:\Users\temek\source\repos\garden\garden\obj\Debug\net6.0\garden.pdb
