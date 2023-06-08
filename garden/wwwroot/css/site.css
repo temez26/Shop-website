@@ -1,11 +1,8 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-}
+﻿
 
 body {
     min-height: 1000px; /* Adjust the min-height as needed */
-
+    
     background: rgb(97,70,70);
     background: linear-gradient(90deg, rgba(97,70,70,1) 0%, rgba(63,71,29,1) 53%, rgba(50,77,30,1) 87%);
 }
@@ -17,9 +14,10 @@ body {
     }
 
 .container1 {
-    margin-top:2%;
-    margin-right:2%;
-    margin-left:2%;
+    
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
 }
  .header {
     
@@ -29,7 +27,6 @@ body {
     border-radius:10px;
 }
 
-﻿ 
 html {
     font-size: 14px;
     color: white;
@@ -83,24 +80,34 @@ button.accept-policy {
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
+   
+   
 }
 
 p {
-    font-size: 18px;
+    font-size: 12px;
     text-align: center;
     font-style: italic;
     color: white;
+   
 }
 
-
+.text-adjust {
+    font-size: 20px;
+    
+}
 
 @media (max-width:484px) {
     .footer {
         font-size: 12px;
     }
-
+    .text-adjust {
+        font-size:15px;
+        margin-bottom:-5%;
+    }
     p {
-        font-size: 12px;
+        font-size: 10px;
+
     }
 
 
@@ -116,6 +123,10 @@ p {
 
     .footer-font {
         font-size: 10px;
+    }
+    .text-adjust {
+        font-size: 14px;
+        
     }
     p {
         font-size:8px;
@@ -144,10 +155,10 @@ body.dark-mode {
     margin-top:2%;
 }
 .header {
-    width: 100%;
+    width:100%;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(../images/bg.jpg) center no-repeat;
-    background-size: cover;
+    background-size:cover;
     position: relative;
 }
 
@@ -169,10 +180,10 @@ body.dark-mode {
 }
 
 .about-us {
-    height: 90vh;
-    display: flex;
-    align-items: center;
+   margin-top:10%;
+    
 }
+
 
 .about-us-left {
     width: 40%;
@@ -301,7 +312,7 @@ body.dark-mode {
 
 .main-heading {
     font-family: "Marck Script", cursive;
-    font-size: 60px;
+    font-size: 90px;
     font-weight: 300;
     color: #d8ae53;
     margin-bottom: 40px;
@@ -310,15 +321,27 @@ body.dark-mode {
 
 @media screen and (max-width: 1000px) {
     .main-heading {
-        font-size: 45px;
+        font-size: 60px;
         margin-bottom: 20px;
+    }
+    .main-name {
+        font-size:45px;
+    }
+    .sub-name {
+        font-size:16px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .main-heading {
-        font-size: 40px;
+        font-size: 50px;
         margin-bottom: 10px;
+    }
+    .main-name {
+        font-size: 40px;
+    }
+    .sub-name {
+        font-size: 14px;
     }
   
 }
@@ -442,3 +465,12 @@ body.dark-mode {
     border-radius: 25%;
 }
 
+
+@media (max-width: 320px) {
+    .carousel-caption .btn-sm {
+        padding: 0.25rem 0.5rem; /* Adjust the padding as needed */
+        font-size: 0.75rem; /* Adjust the font size as needed */
+        line-height: 1.5; /* Adjust the line height as needed */
+        border-radius: 0.25rem; /* Adjust the border radius as needed */
+    }
+}
