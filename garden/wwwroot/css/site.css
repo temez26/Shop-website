@@ -300,16 +300,19 @@ body.dark-mode {
     text-transform: none;
     margin-top:12%;
 }
-
-.sub-name {
-    font-family: Roboto, sans-serif;
-    font-size: 26px;
-    color: #ccc;
-    text-align: center;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+#adjust {
+    margin-top:0;
 }
+
+    .sub-name {
+        font-family: Roboto, sans-serif;
+        font-size: 26px;
+        color: #ccc;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
 
 .main-heading {
     font-family: "Marck Script", cursive;
