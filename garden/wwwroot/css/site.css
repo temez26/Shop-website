@@ -292,17 +292,18 @@ body.dark-mode {
 
 .main-name {
     font-family: "Marck Script", cursive;
-    font-size: 50px;
+    font-size: 75px;
     color: #ccc;
     text-align: center;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: none;
+    margin-top:12%;
 }
 
 .sub-name {
     font-family: Roboto, sans-serif;
-    font-size: 18px;
+    font-size: 26px;
     color: #ccc;
     text-align: center;
     font-weight: 300;
@@ -312,38 +313,75 @@ body.dark-mode {
 
 .main-heading {
     font-family: "Marck Script", cursive;
-    font-size: 90px;
+    font-size: 100px;
     font-weight: 300;
     color: #d8ae53;
     margin-bottom: 40px;
     text-align: center;
 }
+.card-overlay-heading {
+    font-size:30px;
+}
+.card-overlay-paragraph {
+    font-size: 24px;
+}
+
+
 
 @media screen and (max-width: 1000px) {
     .main-heading {
-        font-size: 60px;
+        font-size: 78px;
         margin-bottom: 20px;
     }
     .main-name {
-        font-size:45px;
+        font-size:60px;
     }
     .sub-name {
-        font-size:16px;
+        font-size:20px;
+    }
+    .card-overlay-heading {
+        font-size: 20px;
+    }
+
+    .card-overlay-paragraph {
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .main-heading {
-        font-size: 50px;
+        font-size: 68px;
         margin-bottom: 10px;
     }
     .main-name {
-        font-size: 40px;
+        font-size: 55px;
     }
     .sub-name {
-        font-size: 14px;
+        font-size: 16px;
+    }
+    .card-overlay-heading {
+        font-size: 16px;
+    }
+
+    .card-overlay-paragraph {
+        font-size: 13px;
     }
   
+}
+
+@media screen and (max-width: 500px) {
+    .main-heading {
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+
+    .main-name {
+        font-size: 40px;
+    }
+
+    .sub-name {
+        font-size: 12px;
+    }
 }
 
 .sub-heading {
@@ -474,3 +512,17 @@ body.dark-mode {
         border-radius: 0.25rem; /* Adjust the border radius as needed */
     }
 }
+
+@media (max-width: 1000px) {
+    .super {
+        margin-top: 30%;
+       
+    }
+}
+@media (max-width: 771px) {
+    .super {
+        margin-top:20%;
+        
+    }
+}
+
