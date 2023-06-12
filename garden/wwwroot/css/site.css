@@ -337,7 +337,7 @@ body.dark-mode {
 .card-img-top {
     height: 200px; /* Adjust the height as per your preference */
     object-fit: cover;
-    opacity:0.95;
+    opacity:0.91;
 }
 
 .card-overlay {
@@ -356,7 +356,9 @@ body.dark-mode {
     transition: opacity 0.3s ease-in-out;
 }
 .card:hover .card-overlay {
-    opacity: 1;
+    opacity: 0.35;
+    
+    
 }
 
 .card-title {
@@ -372,7 +374,8 @@ body.dark-mode {
 
 /* Move card title to the right on hover */
 .card:hover .card-title {
-    transform: translateX(5px);
+    transform: translateX(2px);
+    font-size: 32px;
 }
 .btn-primary {
     margin-bottom: 0.5rem;
