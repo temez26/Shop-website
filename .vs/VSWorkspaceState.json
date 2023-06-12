@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\garden",
+    "\\garden\\Pages"
   ],
-  "SelectedNode": "\\garden.sln",
+  "SelectedNode": "\\garden\\Pages\\Privacy.cshtml",
   "PreviewInSolutionExplorer": false
 }
