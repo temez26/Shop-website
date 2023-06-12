@@ -52,3 +52,21 @@ function applySavedMode() {
     var contentWrapper = document.getElementById("contentWrapper");
     contentWrapper.classList.remove("content-hidden");
 }
+
+
+var headlines = [
+    "Discover the Beauty of Your Garden",
+    "Create Your Dream Outdoor Space",
+    "Transform Your Garden into a Oasis",
+    "Get Inspired with Our Gardening Tips",
+    "Find the Perfect Plants for Your Garden"
+];
+var headlineElement = document.getElementById("headline");
+var currentIndex = 0;
+
+function rotateHeadlines() {
+    headlineElement.textContent = headlines[currentIndex];
+    currentIndex = (currentIndex + 1) % headlines.length;
+}
+
+setInterval(rotateHeadlines, 5000);
