@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qaWEqlODoXoUjv1Xwv0KkD6Q3yp7KrPhl2bCN468iW4=",
+  "Hash": "cEUB0UkNFiaNj6GMr7gOL+0DlgUZjoJ6Jrd95InklFI=",
   "Source": "garden",
   "BasePath": "_content/garden",
   "Mode": "Default",
@@ -357,12 +357,12 @@
       "OriginalItemSpec": "wwwroot\\images\\nav-img-3.jpg"
     },
     {
-      "Identity": "C:\\Users\\temek\\source\\repos\\Shop-website\\garden\\wwwroot\\images\\pestcontrol.png",
+      "Identity": "C:\\Users\\temek\\source\\repos\\Shop-website\\garden\\wwwroot\\images\\pestcontrol.jpg",
       "SourceId": "garden",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\temek\\source\\repos\\Shop-website\\garden\\wwwroot\\",
       "BasePath": "_content/garden",
-      "RelativePath": "images/pestcontrol.png",
+      "RelativePath": "images/pestcontrol.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -371,7 +371,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\pestcontrol.png"
+      "OriginalItemSpec": "wwwroot\\images\\pestcontrol.jpg"
     },
     {
       "Identity": "C:\\Users\\temek\\source\\repos\\Shop-website\\garden\\wwwroot\\images\\stop.png",
