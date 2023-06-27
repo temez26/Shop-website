@@ -5,7 +5,7 @@ This is the README file for the Gardening website, hosted on the Azure Portal as
 
 ## About
 
-The Gardening website is a platform dedicated to providing gardening tips and resources for professionals and hobbyists. It features various sections, including a header with a carousel, an about section, and a gallery section showcasing gardening products.
+The Gardening website is a platform dedicated to providing gardening tips and resources for professionals and hobbyists. It features various sections, including a header with a carousel, an about section, and a gallery section showcasing gardening products. Added shopping cart for products you want to buy but not ready.
 
 ## Technologies Used
 
