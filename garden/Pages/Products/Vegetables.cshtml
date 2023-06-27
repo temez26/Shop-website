@@ -1,0 +1,51 @@
+﻿@page
+@model garden.Pages.Products.VegetablesModel
+@{
+    ViewData["Title"] = "Vegetables";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vegetable Shop</title>
+    <link rel="stylesheet" href="~/css/products.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="product-card">
+        <div class="card">
+            <img src="vegetable1.jpg" alt="Vegetable 1">
+            <h5 class="card-title">Carrots</h5>
+            <p class="card-price">$1.99</p>
+            <button class="add-to-cart" data-name="Carrots" data-price="1.99">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="vegetable2.jpg" alt="Vegetable 2">
+            <h5 class="card-title">Broccoli</h5>
+            <p class="card-price">$2.49</p>
+            <button class="add-to-cart" data-name="Broccoli" data-price="2.49">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="vegetable3.jpg" alt="Vegetable 3">
+            <h5 class="card-title">Tomatoes</h5>
+            <p class="card-price">$0.99</p>
+            <button class="add-to-cart" data-name="Tomatoes" data-price="0.99">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="vegetable4.jpg" alt="Vegetable 4">
+            <h5 class="card-title">Spinach</h5>
+            <p class="card-price">$1.49</p>
+            <button class="add-to-cart" data-name="Spinach" data-price="1.49">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="vegetable5.jpg" alt="Vegetable 5">
+            <h5 class="card-title">Bell Peppers</h5>
+            <p class="card-price">$2.99</p>
+            <button class="add-to-cart" data-name="Bell Peppers" data-price="2.99">Add to Cart</button>
+        </div>
+        <!-- Add more vegetable cards with the same structure -->
+    </div>
+
+ 
+</body>
+</html>
+

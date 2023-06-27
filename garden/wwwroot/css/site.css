@@ -149,6 +149,100 @@ body.dark-mode {
     margin-left:2%;
     margin-top:1%;
 }
+.product-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+.custom-icon {
+    margin-right: 20px; /* Adjust the spacing between the icon and button */
+}
+.notification {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    z-index: 9999;
+    opacity: 0;
+    transition: top 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+    .notification.show {
+        top: 20px;
+        opacity: 1;
+    }
+
+
+.order-now-button {
+    border-radius:4px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+
+.card-price {
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.cart {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cart-item {
+    font-size:15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+.total {
+    font-size:18px;
+    text-align: right;
+    margin-top: 10px;
+}
+#cart-icon {
+    position: relative;
+}
+
+
+#cart-tooltip {
+    display: none;
+    position: absolute;
+    margin-top:-10px;
+    top: 100%;
+    left: 90%;
+    transform: translateX(-50%);
+    padding: 10px;
+    font-size:20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
 .card-overlay, .card-img {
     width: 100%;
     height: 100%;
@@ -271,26 +365,9 @@ body.dark-mode {
     flex-wrap: wrap;
 }
 
-.logo {
-    display: block;
-    font-size: 70px;
-    color: #d8ae53;
-    border: 4px solid #d8ae53;
-    width: 110px;
-    height: 110px;
-    border-radius: 40%;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-@media screen and (max-width: 991px) {
- .logo {
-     width:150px;
-     height:110px;
- }
-}
+
+
 
 .main-name {
     font-family: "Marck Script", cursive;
