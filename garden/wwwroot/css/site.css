@@ -227,7 +227,9 @@ body.dark-mode {
     position: relative;
 }
 
-
+.shop-container {
+    position: relative;
+}
 #cart-tooltip {
     display: none;
     position: absolute;
