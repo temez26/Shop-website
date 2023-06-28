@@ -1,78 +1,4 @@
-﻿function toggleDarkMode() {
-    var body = document.body;
-    var darkModeToggle = document.getElementById("darkModeToggle");
-    var darkModeIcon = document.getElementById("darkModeIcon");
-
-    if (darkModeToggle.checked) {
-        // Enable dark mode
-        body.classList.add("dark-mode");
-        darkModeIcon.classList.remove("fa-sun");
-        darkModeIcon.classList.add("fa-moon");
-
-        saveModePreference("dark-mode");
-    } else {
-        // Enable light mode
-        body.classList.remove("dark-mode");
-        darkModeIcon.classList.remove("fa-moon");
-        darkModeIcon.classList.add("fa-sun");
-
-        saveModePreference("light-mode");
-    }
-}
-
-function saveModePreference(mode) {
-    localStorage.setItem("modePreference", mode);
-}
-
-function applySavedMode() {
-    var savedMode = localStorage.getItem("modePreference");
-    var body = document.body;
-    var darkModeToggle = document.getElementById("darkModeToggle");
-    var darkModeIcon = document.getElementById("darkModeIcon");
-
-    if (savedMode === "dark-mode") {
-        // Enable dark mode
-        body.classList.add("dark-mode");
-        darkModeToggle.checked = true;
-        darkModeIcon.classList.remove("fa-sun");
-        darkModeIcon.classList.add("fa-moon");
-    } else {
-        // Enable light mode (default)
-        body.classList.remove("dark-mode");
-        darkModeToggle.checked = false;
-        darkModeIcon.classList.remove("fa-moon");
-        darkModeIcon.classList.add("fa-sun");
-    }
-
-    // Show the content after the preferred mode is applied
-    var contentWrapper = document.getElementById("contentWrapper");
-    contentWrapper.classList.remove("content-hidden");
-}
-
-// Apply the saved mode on page load
-applySavedMode();
-
-
-
-var headlines = [
-    "Discover the Beauty of Your Garden",
-    "Create Your Dream Outdoor Space",
-    "Transform Your Garden into a Oasis",
-    "Get Inspired with Our Gardening Tips",
-    "Find the Perfect Plants for Your Garden"
-];
-var headlineElement = document.getElementById("headline");
-var currentIndex = 0;
-
-function rotateHeadlines() {
-    headlineElement.textContent = headlines[currentIndex];
-    currentIndex = (currentIndex + 1) % headlines.length;
-}
-
-setInterval(rotateHeadlines, 5000);
-
-
-
+﻿
 // Sample data for cart items
 let cartItems = [];
 
@@ -113,45 +39,23 @@ function updateCartView() {
             cartItemsMap.set(item.name, { ...item, quantity: 1 });
         }
     });
+    // Log item data to the console
+    cartItems.forEach(item => {
+        console.log(`Item Name: ${item.name}`);
+        console.log(`Item Price: ${item.price}`);
+        console.log(`Item Quantity: ${item.quantity}`);
+    });
 
     cartItemsMap.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('cart-item');
-
-        const itemInfo = document.createElement('span');
-        itemInfo.innerText = `${item.name} (${item.quantity})`;
-
-        const itemPrice = document.createElement('span');
-        itemPrice.innerText = `€${(item.price * item.quantity).toFixed(2)}`;
-
-        const removeIcon = document.createElement('i');
-        removeIcon.className = 'bx bxs-trash';
-        removeIcon.classList.add('remove-icon');
-        removeIcon.setAttribute('title', 'Remove Item');
-        removeIcon.style.cursor = 'pointer';
-        removeIcon.addEventListener('click', () => removeItem(item.name));
-
-        itemDiv.appendChild(itemInfo);
-        itemDiv.appendChild(itemPrice);
-        itemDiv.appendChild(removeIcon);
-
+        itemDiv.innerHTML = `<span>${item.name} (${item.quantity})</span><span>$${(item.price * item.quantity).toFixed(2)}</span>`;
         cartContainer.appendChild(itemDiv);
     });
 
     const cartTotal = document.getElementById('cart-total');
-    cartTotal.textContent = '€' + calculateTotal();
+    cartTotal.textContent = '$' + calculateTotal();
 }
-
-// Function to remove an item from the cart
-function removeItem(itemName) {
-    const itemIndex = cartItems.findIndex(item => item.name === itemName);
-    if (itemIndex !== -1) {
-        cartItems.splice(itemIndex, 1);
-        updateCartView();
-        saveCartItems();
-    }
-}
-
 
 // Function to display a notification message
 function showNotification(message) {
@@ -172,6 +76,8 @@ function showNotification(message) {
     }, 100);
 }
 
+
+
 // Function to handle adding items to the cart
 function addToCart(event) {
     const product = event.target.dataset;
@@ -182,6 +88,7 @@ function addToCart(event) {
     // Show the notification
     showNotification(`Added ${product.name} to the cart.`);
 }
+
 
 // Function to handle emptying the shopping cart
 function emptyCart() {
@@ -228,20 +135,21 @@ cartButtonsContainer.appendChild(emptyCartIcon);
 const orderNowButton = document.createElement('a'); // Change to <a> element instead of <button>
 orderNowButton.innerText = 'Order Now';
 orderNowButton.classList.add('order-now-button');
-orderNowButton.setAttribute('href', '#'); // Set the href attribute to the desired URL
+orderNowButton.setAttribute('href', '/Cart'); // Set the href attribute to the desired URL
 orderNowButton.style.textDecoration = 'none'; // Remove underline styling
 orderNowButton.addEventListener('click', orderNow);
 cartButtonsContainer.appendChild(orderNowButton);
 
+
+
+
 // Append the container to the tooltip element
 cartTooltip.appendChild(cartButtonsContainer);
+
+
 
 // Function to handle "Order Now" action
 function orderNow() {
     // Add your logic here for the "Order Now" action
 }
-
-
-
-
 

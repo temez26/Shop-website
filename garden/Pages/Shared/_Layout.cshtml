@@ -53,7 +53,7 @@
                                 <a class="nav-link" asp-area="" asp-page="/info">Info</a>
                             </li>
                             <li class="shop-container text-black">
-                                <a class="nav-link" asp-page="/Cart" onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()">
+                                <a class="nav-link"  onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()">
                                     <i class="bx bx-shopping-bag" id="cart-icon" onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()"></i>
                                 </a>
                                 <div id="cart-tooltip" onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()">
@@ -64,6 +64,9 @@
                                     <div class="total">
                                         <span>Total:</span>
                                         <span id="cart-total">$0.00</span>
+
+                                       
+
                                     </div>
                                 </div>
                             </li>
@@ -105,7 +108,8 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-  
+   
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

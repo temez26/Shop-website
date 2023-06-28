@@ -226,6 +226,33 @@ body.dark-mode {
 #cart-icon {
     position: relative;
 }
+.order-now-button {
+    display: inline-block;
+    padding: 6px 12px; /* Adjust padding to make the button smaller */
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px; /* Adjust font size to fit the smaller button */
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center; /* Center the text within the button */
+    line-height: 1; /* Remove any extra line height */
+    width: fit-content; /* Adjust the button width to fit the content */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+}
+
+.remove-icon {
+    margin-left: 3px;
+}
+
+
+
+
 
 .shop-container {
     position: relative;

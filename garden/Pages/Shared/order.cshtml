@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Page</title>
+    <style>
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .notification {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #ddd;
+            transition: opacity 0.5s;
+            opacity: 0;
+        }
+
+            .notification.show {
+                opacity: 1;
+            }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <div>
+        <p>Total: <span id="cart-total"></span></p>
+        <button id="empty-cart">Empty Cart</button>
+        <button id="order">Place Order</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
