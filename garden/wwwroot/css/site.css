@@ -308,6 +308,28 @@ body.dark-mode {
    margin-top:10%;
     
 }
+/* shopping-cart.css */
+
+
+
+.shop-container {
+    display: flex;
+    align-items: center;
+}
+
+    .shop-container .bx-shopping-bag {
+        color: gray;
+        font-size: 24px;
+       
+    }
+
+    /* shopping-cart.css */
+
+    .shop-container #cart-tooltip {
+        text-align: left;
+        margin-left: -100%;
+        margin-top:10%;
+    }
 
 
 .about-us-left {

@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\temek\source\repos\Shop-website\garden
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/temek/source/repos/Shop-website/garden/Pages/Cart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/temek/source/repos/Shop-website/garden/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -58,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/temek/source/repos/Shop-website/garden/Pages/Products/Vegetables.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcVmVnZXRhYmxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/temek/source/repos/Shop-website/garden/Pages/Shared/order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXG9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/temek/source/repos/Shop-website/garden/Pages/Shared/_Layout.cshtml]

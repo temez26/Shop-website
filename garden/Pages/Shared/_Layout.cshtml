@@ -41,7 +41,22 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <div class="navbar-collapse collapse justify-content-end">
+                    <div class="shop-container text-black justify-content-center ">
+                        <a class="nav-link" onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()">
+                            <i class="bx bx-shopping-bag" id="cart-icon" onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()"></i>
+                        </a>
+                        <div id="cart-tooltip" onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()">
+                            <h2>Shopping Cart</h2>
+                            <div id="cart-items">
+                                <!-- Cart items will be dynamically added here -->
+                            </div>
+                            <div class="total">
+                                <span>Total:</span>
+                                <span id="cart-total">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-collapse collapse justify-content-center">
                         <ul class="navbar-nav fs-3">
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
@@ -52,28 +67,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-page="/info">Info</a>
                             </li>
-                            <li class="shop-container text-black">
-                                <a class="nav-link"  onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()">
-                                    <i class="bx bx-shopping-bag" id="cart-icon" onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()"></i>
-                                </a>
-                                <div id="cart-tooltip" onmouseover="showCartTooltip()" onmouseout="hideCartTooltip()">
-                                    <h2>Shopping Cart</h2>
-                                    <div id="cart-items">
-                                        <!-- Cart items will be dynamically added here -->
-                                    </div>
-                                    <div class="total">
-                                        <span>Total:</span>
-                                        <span id="cart-total">$0.00</span>
-
-                                       
-
-                                    </div>
-                                </div>
-                            </li>
-
-
+                       
                         </ul>
+
                     </div>
+                 
+
                 </div>
             </nav>
         </header>
