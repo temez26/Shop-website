@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcaW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/temek/source/repos/Shop-website/garden/Pages/order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcb3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/temek/source/repos/Shop-website/garden/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,10 +58,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/temek/source/repos/Shop-website/garden/Pages/Products/Vegetables.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcVmVnZXRhYmxlcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/temek/source/repos/Shop-website/garden/Pages/Shared/order.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXG9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/temek/source/repos/Shop-website/garden/Pages/Shared/_Layout.cshtml]

@@ -1,5 +1,4 @@
-﻿
-// Sample data for cart items
+﻿// Sample data for cart items
 let cartItems = [];
 
 // Load cart items from local storage
@@ -18,17 +17,16 @@ function saveCartItems() {
 
 // Function to calculate the total price
 function calculateTotal() {
-    let total = 0;
-    cartItems.forEach(item => {
-        total += item.price * item.quantity;
-    });
-    return total.toFixed(2);
+    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 }
 
 // Function to update the cart view
 function updateCartView() {
     const cartContainer = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+
     cartContainer.innerHTML = '';
+    cartTotal.textContent = `€${calculateTotal()}`;
 
     const cartItemsMap = new Map();
 
@@ -39,24 +37,58 @@ function updateCartView() {
             cartItemsMap.set(item.name, { ...item, quantity: 1 });
         }
     });
-    // Log item data to the console
-    cartItems.forEach(item => {
-        console.log(`Item Name: ${item.name}`);
-        console.log(`Item Price: ${item.price}`);
-        console.log(`Item Quantity: ${item.quantity}`);
-    });
 
     cartItemsMap.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.classList.add('cart-item');
-        itemDiv.innerHTML = `<span>${item.name} (${item.quantity})</span><span>$${(item.price * item.quantity).toFixed(2)}</span>`;
-        cartContainer.appendChild(itemDiv);
-    });
+        const existingItemDiv = cartContainer.querySelector(`[data-item="${item.name}"]`);
 
-    const cartTotal = document.getElementById('cart-total');
-    cartTotal.textContent = '$' + calculateTotal();
+        if (existingItemDiv) {
+            const itemQuantity = existingItemDiv.querySelector('.item-quantity');
+            const itemPrice = existingItemDiv.querySelector('.item-price');
+            itemQuantity.textContent = `(${item.quantity})`;
+            itemPrice.textContent = `€${(item.price * item.quantity).toFixed(2)}`;
+        } else {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item');
+            itemDiv.dataset.item = item.name;
+
+            const itemInfo = document.createElement('span');
+            itemInfo.innerText = item.name;
+
+            const itemQuantity = document.createElement('span');
+            itemQuantity.classList.add('item-quantity');
+            itemQuantity.innerText = `(${item.quantity})`;
+
+            const itemPrice = document.createElement('span');
+            itemPrice.classList.add('item-price');
+            itemPrice.innerText = `€${(item.price * item.quantity).toFixed(2)}`;
+
+            const removeIcon = document.createElement('i');
+            removeIcon.className = 'bx bxs-trash';
+            removeIcon.classList.add('remove-icon');
+            removeIcon.setAttribute('title', 'Remove Item');
+            removeIcon.style.cursor = 'pointer';
+            removeIcon.addEventListener('click', () => removeItem(item.name));
+
+            itemDiv.appendChild(itemInfo);
+            itemDiv.appendChild(itemQuantity);
+            itemDiv.appendChild(itemPrice);
+            itemDiv.appendChild(removeIcon);
+
+            cartContainer.appendChild(itemDiv);
+        }
+    });
 }
 
+
+// Function to remove an item from the cart
+function removeItem(itemName) {
+    const itemIndex = cartItems.findIndex(item => item.name === itemName);
+    if (itemIndex !== -1) {
+        cartItems.splice(itemIndex, 1);
+        updateCartView();
+        saveCartItems();
+    }
+}
 // Function to display a notification message
 function showNotification(message) {
     const notification = document.createElement('div');
@@ -76,8 +108,6 @@ function showNotification(message) {
     }, 100);
 }
 
-
-
 // Function to handle adding items to the cart
 function addToCart(event) {
     const product = event.target.dataset;
@@ -89,7 +119,6 @@ function addToCart(event) {
     showNotification(`Added ${product.name} to the cart.`);
 }
 
-
 // Function to handle emptying the shopping cart
 function emptyCart() {
     cartItems = [];
@@ -99,14 +128,16 @@ function emptyCart() {
 
 // Add event listeners to the add-to-cart buttons
 const addButtons = document.getElementsByClassName('add-to-cart');
-for (let i = 0; i < addButtons.length; i++) {
-    addButtons[i].addEventListener('click', addToCart);
-}
-
-// Load cart items when the DOM is ready
-document.addEventListener('DOMContentLoaded', loadCartItems);
+Array.from(addButtons).forEach(button => {
+    button.addEventListener('click', addToCart);
+});
 
 // JavaScript code to show/hide the cart tooltip
+function toggleCartTooltip() {
+    const tooltip = document.getElementById('cart-tooltip');
+    tooltip.style.display = tooltip.style.display === 'block' ? 'none' : 'block';
+}
+
 function showCartTooltip() {
     const tooltip = document.getElementById('cart-tooltip');
     tooltip.style.display = 'block';
@@ -135,21 +166,19 @@ cartButtonsContainer.appendChild(emptyCartIcon);
 const orderNowButton = document.createElement('a'); // Change to <a> element instead of <button>
 orderNowButton.innerText = 'Order Now';
 orderNowButton.classList.add('order-now-button');
-orderNowButton.setAttribute('href', '/Cart'); // Set the href attribute to the desired URL
+orderNowButton.setAttribute('href', '/order'); // Set the href attribute to the desired URL
 orderNowButton.style.textDecoration = 'none'; // Remove underline styling
 orderNowButton.addEventListener('click', orderNow);
 cartButtonsContainer.appendChild(orderNowButton);
 
-
-
-
 // Append the container to the tooltip element
 cartTooltip.appendChild(cartButtonsContainer);
 
-
-
 // Function to handle "Order Now" action
 function orderNow() {
-    // Add your logic here for the "Order Now" action
+ 
 }
 
+
+// Load cart items when the DOM is ready
+document.addEventListener('DOMContentLoaded', loadCartItems);

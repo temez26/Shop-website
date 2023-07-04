@@ -223,8 +223,9 @@ body.dark-mode {
     text-align: right;
     margin-top: 10px;
 }
-#cart-icon {
+#cart-icon:hover {
     position: relative;
+    color: lightgrey;
 }
 .order-now-button {
     display: inline-block;
@@ -272,6 +273,7 @@ body.dark-mode {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 9999;
 }
+ 
 .card-overlay, .card-img {
     width: 100%;
     height: 100%;
