@@ -8,7 +8,6 @@ function loadCartItems() {
         cartItems = JSON.parse(storedItems);
     }
     updateCartView(); // Update the cart view after loading the items
-    updateOrderView(); // Update the order view after loading the items
 }
 
 // Save cart items to local storage
@@ -17,8 +16,8 @@ function saveCartItems() {
 }
 
 // Function to calculate the total price
-function calculateTotal(items) {
-    return items.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+function calculateTotal() {
+    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 }
 
 // Function to update the cart view
@@ -27,65 +26,59 @@ function updateCartView() {
     const cartTotal = document.getElementById('cart-total');
 
     cartContainer.innerHTML = '';
-    cartTotal.textContent = `€${calculateTotal(cartItems)}`;
+    cartTotal.textContent = `€${calculateTotal()}`;
 
-    syncData(cartContainer, cartItems);
-}
+    const cartItemsMap = new Map();
 
-// Function to update the order view
-function updateOrderView() {
-    const orderContainer = document.getElementById('order-items');
-    const orderTotal = document.getElementById('order-total');
-
-    orderContainer.innerHTML = '';
-    orderTotal.textContent = `€${calculateTotal(cartItems)}`;
-
-    syncData(orderContainer, cartItems);
-}
-
-// Function to sync the data between cart and order views
-function syncData(container, items) {
-    const itemsMap = new Map();
-
-    items.forEach(item => {
-        if (itemsMap.has(item.name)) {
-            itemsMap.get(item.name).quantity += 1;
+    cartItems.forEach(item => {
+        if (cartItemsMap.has(item.name)) {
+            cartItemsMap.get(item.name).quantity += 1;
         } else {
-            itemsMap.set(item.name, { ...item, quantity: 1 });
+            cartItemsMap.set(item.name, { ...item, quantity: 1 });
         }
     });
 
-    itemsMap.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.classList.add(container.id === 'cart-items' ? 'cart-item' : 'order-item');
-        itemDiv.dataset.item = item.name;
+    cartItemsMap.forEach(item => {
+        const existingItemDiv = cartContainer.querySelector(`[data-item="${item.name}"]`);
 
-        const itemInfo = document.createElement('span');
-        itemInfo.innerText = item.name;
+        if (existingItemDiv) {
+            const itemQuantity = existingItemDiv.querySelector('.item-quantity');
+            const itemPrice = existingItemDiv.querySelector('.item-price');
+            itemQuantity.textContent = `(${item.quantity})`;
+            itemPrice.textContent = `€${(item.price * item.quantity).toFixed(2)}`;
+        } else {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item');
+            itemDiv.dataset.item = item.name;
 
-        const itemQuantity = document.createElement('span');
-        itemQuantity.classList.add('item-quantity');
-        itemQuantity.innerText = `(${item.quantity})`;
+            const itemInfo = document.createElement('span');
+            itemInfo.innerText = item.name;
 
-        const itemPrice = document.createElement('span');
-        itemPrice.classList.add('item-price');
-        itemPrice.innerText = `€${(item.price * item.quantity).toFixed(2)}`;
+            const itemQuantity = document.createElement('span');
+            itemQuantity.classList.add('item-quantity');
+            itemQuantity.innerText = `(${item.quantity})`;
 
-        const removeIcon = document.createElement('i');
-        removeIcon.className = 'bx bxs-trash';
-        removeIcon.classList.add('remove-icon');
-        removeIcon.setAttribute('title', 'Remove Item');
-        removeIcon.style.cursor = 'pointer';
-        removeIcon.addEventListener('click', () => removeItem(item.name));
+            const itemPrice = document.createElement('span');
+            itemPrice.classList.add('item-price');
+            itemPrice.innerText = `€${(item.price * item.quantity).toFixed(2)}`;
 
-        itemDiv.appendChild(itemInfo);
-        itemDiv.appendChild(itemQuantity);
-        itemDiv.appendChild(itemPrice);
-        itemDiv.appendChild(removeIcon);
+            const removeIcon = document.createElement('i');
+            removeIcon.className = 'bx bxs-trash';
+            removeIcon.classList.add('remove-icon');
+            removeIcon.setAttribute('title', 'Remove Item');
+            removeIcon.style.cursor = 'pointer';
+            removeIcon.addEventListener('click', () => removeItem(item.name));
 
-        container.appendChild(itemDiv);
+            itemDiv.appendChild(itemInfo);
+            itemDiv.appendChild(itemQuantity);
+            itemDiv.appendChild(itemPrice);
+            itemDiv.appendChild(removeIcon);
+
+            cartContainer.appendChild(itemDiv);
+        }
     });
 }
+
 
 // Function to remove an item from the cart
 function removeItem(itemName) {
@@ -93,11 +86,9 @@ function removeItem(itemName) {
     if (itemIndex !== -1) {
         cartItems.splice(itemIndex, 1);
         updateCartView();
-        updateOrderView();
         saveCartItems();
     }
 }
-
 // Function to display a notification message
 function showNotification(message) {
     const notification = document.createElement('div');
@@ -122,7 +113,6 @@ function addToCart(event) {
     const product = event.target.dataset;
     cartItems.push({ name: product.name, price: parseFloat(product.price), quantity: 1 });
     updateCartView();
-    
     saveCartItems(); // Save cart items after adding a new item
 
     // Show the notification
@@ -130,10 +120,9 @@ function addToCart(event) {
 }
 
 // Function to handle emptying the shopping cart
-function emptyCart(event) {
+function emptyCart() {
     cartItems = [];
     updateCartView();
-    updateOrderView();
     saveCartItems(); // Save cart items after emptying the cart
 }
 
@@ -187,8 +176,9 @@ cartTooltip.appendChild(cartButtonsContainer);
 
 // Function to handle "Order Now" action
 function orderNow() {
-    console.log(10);
+
 }
+
 
 // Load cart items when the DOM is ready
 document.addEventListener('DOMContentLoaded', loadCartItems);
