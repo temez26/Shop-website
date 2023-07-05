@@ -7,27 +7,30 @@
 <html>
 <head>
     <title>Order Window</title>
-    <style>
-        /* Add your custom CSS styles here */
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
-    <h1>Order Window</h1>
+    <div class="container order-box d-flex flex-column ">
+        <h1>Order Window</h1>
 
-    
+        <hr>
 
-    <hr>
+        <h2>Your Order</h2>
+        <div id="order-items"></div>
+        <div class="text-right" id="order-total"></div>
 
-    <h2>Your Order</h2>
-    <div id="order-items"></div>
-    <span id="order-total"></span>
+        <hr>
 
-    <hr>
+        <div id="cart-tooltip">
+            <!-- The cart tooltip content -->
+        </div>
+        <a href="/userdetail" class="btn btn-secondary rounded align-self-end">Order now</a>
+       
 
-    <div id="cart-tooltip">
-        <!-- The cart tooltip content -->
     </div>
-
-   
 </body>
 </html>
+
+
+

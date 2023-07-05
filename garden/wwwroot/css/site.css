@@ -29,12 +29,33 @@ body {
     border-radius:10px;
 }
 
+
 html {
     font-size: 14px;
     color: white;
     height: 100%;
 }
 
+
+.order-box {
+    color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgb(36,36,36);
+}
+
+.item-container {
+    margin-bottom: 10px;
+}
+
+.item-info {
+    margin-right: 5px;
+}
+
+.item-price {
+    margin-left: 5px;
+}
 
 
 a.navbar-brand {
@@ -183,11 +204,7 @@ body.dark-mode {
     }
 
 
-.order-now-button {
-    border-radius:4px;
-    font-size: 12px;
-    padding: 5px 10px;
-}
+
 
 
 .card-price {
@@ -230,7 +247,7 @@ body.dark-mode {
 .order-now-button {
     display: inline-block;
     padding: 6px 12px; /* Adjust padding to make the button smaller */
-    background-color: #4CAF50;
+    background-color: grey;
     color: #fff;
     border: none;
     border-radius: 4px;

@@ -32,16 +32,28 @@ function updateCartView() {
     syncData(cartContainer, cartItems);
 }
 
+
 // Function to update the order view
 function updateOrderView() {
     const orderContainer = document.getElementById('order-items');
     const orderTotal = document.getElementById('order-total');
 
     orderContainer.innerHTML = '';
-    orderTotal.textContent = `€${calculateTotal(cartItems)}`;
+    orderTotal.innerHTML = ''; // Clear the order total container
+
+    const totalLabel = document.createElement('span');
+    totalLabel.innerText = 'Total: ';
+
+    const totalPrice = document.createElement('span');
+    totalPrice.innerText = `€${calculateTotal(cartItems)}`;
+
+    orderTotal.appendChild(totalLabel);
+    orderTotal.appendChild(totalPrice);
 
     syncData(orderContainer, cartItems);
 }
+
+
 
 // Function to sync the data between cart and order views
 function syncData(container, items) {
@@ -59,8 +71,10 @@ function syncData(container, items) {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add(container.id === 'cart-items' ? 'cart-item' : 'order-item');
         itemDiv.dataset.item = item.name;
+        itemDiv.classList.add('item-container'); // Add a CSS class for spacing
 
         const itemInfo = document.createElement('span');
+        itemInfo.classList.add('item-info');
         itemInfo.innerText = item.name;
 
         const itemQuantity = document.createElement('span');
@@ -72,7 +86,7 @@ function syncData(container, items) {
         itemPrice.innerText = `€${(item.price * item.quantity).toFixed(2)}`;
 
         const removeIcon = document.createElement('i');
-        removeIcon.className = 'bx bxs-trash';
+        removeIcon.className = 'bx bxs-trash float-right';
         removeIcon.classList.add('remove-icon');
         removeIcon.setAttribute('title', 'Remove Item');
         removeIcon.style.cursor = 'pointer';
@@ -86,6 +100,7 @@ function syncData(container, items) {
         container.appendChild(itemDiv);
     });
 }
+
 
 // Function to remove an item from the cart
 function removeItem(itemName) {

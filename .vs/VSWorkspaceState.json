@@ -3,8 +3,10 @@
     "",
     "\\garden",
     "\\garden\\Pages",
-    "\\garden\\Pages\\Shared"
+    "\\garden\\Pages\\Shared",
+    "\\garden\\wwwroot",
+    "\\garden\\wwwroot\\js"
   ],
-  "SelectedNode": "\\garden\\Pages\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\garden\\wwwroot\\js\\cart.js",
   "PreviewInSolutionExplorer": false
 }
